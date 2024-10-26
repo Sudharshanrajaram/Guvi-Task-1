@@ -108,3 +108,17 @@ if (cardsWon.length == cardArray.length / 2){
 
 }
 
+var timeLeft = 30;
+var count = document.getElementById("timer");
+function startCountDown(){
+var timer = setInterval(function(){
+    if (timeLeft <= 0){
+        count.innerText = "Time's up";
+    }
+    else{
+        count.innerText = "TimeLeft : " + timeLeft + " seconds";
+        timeLeft--;
+    }
+},1000);
+}
+startCountDown();
