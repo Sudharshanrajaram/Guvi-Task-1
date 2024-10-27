@@ -114,6 +114,7 @@ function startCountDown(){
 var timer = setInterval(function(){
     if (timeLeft <= 0){
         count.innerText = "Time's up";
+        gridDisplay.innerHTML = "Time's up !!<a href=./index.html>Restart</a>";
     }
     else{
         count.innerText = "TimeLeft : " + timeLeft + " seconds";
