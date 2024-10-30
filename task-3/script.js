@@ -81,7 +81,7 @@ function flipCard(){
     }
 }
 
-cardsWons = [];
+cardsWon = [];
 
 function checkMatch(){
     const cards = document.querySelectorAll('img');
@@ -91,8 +91,8 @@ function checkMatch(){
         cards[card_2[1]].setAttribute("src","img/finish.png");
         cards[card_2[0]].removeEventListener("click", flipCard);
         cards[card_2[1]].removeEventListener("click", flipCard);
-        cardsWons.push(card_1);
-        scoreDisplay.innerHTML=cardsWons.length;
+        cardsWon.push(card_1);
+        scoreDisplay.innerHTML=cardsWon.length;
     }
     else{
         cards[card_2[0]].setAttribute("src","img/on.png");
@@ -102,7 +102,7 @@ function checkMatch(){
 card_1 = [];
 card_2 = [];
 
-if (cardsWons.length == cardArray.length / 2){
+if (cardsWon.length == cardArray.length / 2){
     scoreDisplay.innerHTML = ("You Won!");
 }
 
@@ -123,3 +123,4 @@ var timer = setInterval(function(){
 },1000);
 }
 startCountDown();
+
