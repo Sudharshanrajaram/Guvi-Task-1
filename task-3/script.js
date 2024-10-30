@@ -91,7 +91,7 @@ function checkMatch(){
         cards[card_2[1]].setAttribute("src","img/finish.png");
         cards[card_2[0]].removeEventListener("click", flipCard);
         cards[card_2[1]].removeEventListener("click", flipCard);
-        cardsWon.push(card_1);
+        cardsWons.push(card_1);
         scoreDisplay.innerHTML=cardsWons.length;
     }
     else{
