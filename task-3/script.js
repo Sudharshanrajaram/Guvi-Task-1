@@ -81,7 +81,7 @@ function flipCard(){
     }
 }
 
-cardsWon = [];
+cardsWons = [];
 
 function checkMatch(){
     const cards = document.querySelectorAll('img');
@@ -92,7 +92,7 @@ function checkMatch(){
         cards[card_2[0]].removeEventListener("click", flipCard);
         cards[card_2[1]].removeEventListener("click", flipCard);
         cardsWon.push(card_1);
-        scoreDisplay.innerHTML=cardsWon.length;
+        scoreDisplay.innerHTML=cardsWons.length;
     }
     else{
         cards[card_2[0]].setAttribute("src","img/on.png");
@@ -102,7 +102,7 @@ function checkMatch(){
 card_1 = [];
 card_2 = [];
 
-if (cardsWon.length == cardArray.length / 2){
+if (cardsWons.length == cardArray.length / 2){
     scoreDisplay.innerHTML = ("You Won!");
 }
 
